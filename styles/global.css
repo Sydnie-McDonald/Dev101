@@ -1,0 +1,11 @@
+/* font @import */
+
+:root {
+  /* css variables with theme colors,
+    names have to start with "--" */
+  --color-1: #b9af9e;
+}
+
+body {
+    
+}

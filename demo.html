@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- import css: -->
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/demo-global.css">
+    <title>Secrets</title>
+</head>
+
+<body>
+    <!-- each of the children of body becomes part of the "grid" -->
+
+    <img id="hero-image" 
+        src="assets/searching-books.jpeg" 
+        alt="searching ancient books for arcane knowledge"
+    >
+    
+    <h1 id="header">Unlock the Hidden Secrets...</h1>
+    
+    <p id="lead">
+        Be the first to access the arcane knowledge of the mystic
+        wizard coders. Go beyond the ranks of novices and be
+        initiated into the secret order of advanced craftsman.
+    </p>
+
+    <!-- use method="GET" but change action= to be your thank you page  -->
+    <form id="signup-form" action="demo-thank-you.html" method="GET">
+        <label for="email">
+            Email
+        </label>
+        <input id="email" name="email" required>
+        <button>Heed the Calling</button>
+    </form>
+
+</body>
+
+</html>

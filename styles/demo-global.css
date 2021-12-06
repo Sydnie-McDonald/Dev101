@@ -1,0 +1,135 @@
+/* Google Fonts import copied from the font-selection page */
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&family=Permanent+Marker&display=swap');
+
+:root {
+  /* css variables with theme colors,
+    names have to start with "--" */
+  --nomad: #b9af9e;
+  --zeus: #221d14;
+  --irish-coffee: #604124;
+  --potters-clay: #836038;
+  --sinopia: #c25223ff;
+  --white: white;
+}
+
+body {
+  background: var(--potters-clay);
+  /* these become the default font settings for the reset of the page */
+  font-family: 'Patua One', sans-serif;
+  color: var(--zeus);
+}
+
+#hero-image {
+  /* for grid mode, the area for this element */
+  grid-area: image;
+
+  /* give the image a defined height and width,
+     then cover will make sure it covers that area */
+  object-fit: cover;
+  height: 50vh;
+  width: 100vw;
+}
+
+/* these css settings _only_ happen when the screen is 900px or more */
+@media (min-width: 900px) {
+  body {
+    /* take up the visible height of the "viewport" */
+    height: 100vh;
+
+    /* Use CSS Grid */
+    display: grid;
+    /* Two columns wide, three rows long */
+    /* even split 50/50 */
+    grid-template-columns: 50% 50%;
+    /* auto fit content for first two, 
+       then give remaining space to third row */
+    grid-template-rows: auto auto 1fr;
+    /* This is a "picture" of where each element should go */
+    grid-template-areas:
+      'header  image'
+      'lead image'
+      'signup  image';
+    /* Default positioning: stretch horizontally, center vertically */
+    justify-items: stretch;
+    align-items: center;
+  }
+
+  /* In wide mode, image should take up the full height,
+     but not go wider than the allotted column width */
+  #hero-image {
+    height: 100%;
+    max-width: 100%;
+  }
+}
+
+#header {
+  /* for grid mode, the area for this element */
+  grid-area: header;
+  /* Add padding to left and right sides */
+  padding: 0 60px;
+
+  /* Color and font settings for the header */
+  color: var(--nomad);
+  font-family: 'Permanent Marker', cursive;
+  font-size: 3rem;
+  line-height: 1.25;
+}
+
+#lead {
+  /* for grid mode, the area for this element */
+  grid-area: lead;
+  /* Add padding on all sides except the top */
+  padding: 0 60px 60px 60px;
+
+  /* Font settings for the lead */
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+#signup-form {
+  /* for grid mode, the area for this element */
+  grid-area: signup; 
+  
+  /* Make the form go the full width so background color goes to the edges */
+  width: 100%;
+  background: var(--irish-coffee);
+  
+  /* Add padding on all sides */
+  padding: 60px;
+}
+
+label, input, button {
+  /* Each form element should take up own line */
+  display: block;
+  /* Go wide, but not wider than 450px */
+  width: 100%;
+  max-width: 450px;
+}
+
+label {
+  /* Color and font settings for label */
+  color: var(--nomad);
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+input {
+  /* size up the input box */
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+button {
+  /* Color and font settings for label */
+  /* Bright color for Call To Action (CTA) */
+  background: var(--sinopia);
+  color: var(--white);
+  border: 0;
+  padding: 20px;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.5rem;
+}
+
