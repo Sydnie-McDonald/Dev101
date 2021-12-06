@@ -1,4 +1,5 @@
 /* font @import */
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
 :root {
   /* css variables with theme colors,
@@ -7,5 +8,5 @@
 }
 
 body {
-    
+  font-family: 'Caveat', cursive;
 }
