@@ -24,12 +24,17 @@ body {
     then cover will make sure it covers that area */
  object-fit: cover;
  height: 50vh;
- width: 100vw;
+ width: 80vw;
 }
-
+h1{
+  text-align: center;
+}
+#product{
+  align-content: right;
+}
 /* these css settings _only_ happen when the screen is 900px or more */
 @media (min-width: 900px) {
-  body {
+  div {
     /* take up the visible height of the "viewport" */
     height: 100vh;
 
@@ -40,7 +45,7 @@ body {
     grid-template-columns: 50% 50%;
     /* auto fit content for first two, 
        then give remaining space to third row */
-    grid-template-rows: auto auto 1fr;
+    grid-template-rows: auto auto 2fr;
     /* This is a "picture" of where each element should go */
     grid-template-areas:
       'header  image'
@@ -63,7 +68,7 @@ body {
   /* for grid mode, the area for this element */
   grid-area: header;
   /* Add padding to left and right sides */
-  padding: 0 60px;
+  padding: 0 0px;
 
   /* Color and font settings for the header */
   color: var(--Coffee);
