@@ -23,15 +23,10 @@ body {
  /* give the image a defined height and width,
     then cover will make sure it covers that area */
  object-fit: cover;
- height: 50vh;
- width: 80vw;
+ height: 100vh;
+ width: 100vw;
 }
-h1{
-  text-align: center;
-}
-#product{
-  align-content: right;
-}
+
 /* these css settings _only_ happen when the screen is 900px or more */
 @media (min-width: 900px) {
   div {
@@ -58,7 +53,7 @@ h1{
 
   /* In wide mode, image should take up the full height,
      but not go wider than the allotted column width */
-  #Mbonnets-image {
+  #mbonnets-image {
     height: 100%;
     max-width: 100%;
   }
